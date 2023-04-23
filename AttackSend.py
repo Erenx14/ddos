@@ -94,14 +94,19 @@ class MyThread(threading.Thread):
             sock.sendto(msg, (ip, int(port)))
             if int(port) == 7777:
                 sock.sendto(Pacotes[5], (ip, int(port)))
+                sock.sendto(Pacotes[7], (ip, int(port)))
             elif int(port) == 7796:
                 sock.sendto(Pacotes[4], (ip, int(port)))
+                sock.sendto(Pacotes[5], (ip, int(port)))
             elif int(port) == 7771:
                 sock.sendto(Pacotes[6], (ip, int(port)))
+                sock.sendto(Pacotes[8], (ip, int(port)))
             elif int(port) == 7107:
                 sock.sendto(Pacotes[7], (ip, int(port)))
+                sock.sendto(Pacotes[5], (ip, int(port)))
             elif int(port) == 7778:
                 sock.sendto(Pacotes[8], (ip, int(port)))
+                sock.sendto(Pacotes[6], (ip, int(port)))
 
 
 if __name__ == '__main__':
